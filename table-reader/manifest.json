@@ -13,7 +13,7 @@
     {
       "js": ["scripts/content.js"],
       "matches": [
-        "file:///home/estif/Documents/random-23/html-table-json/Consumer_Service_History.html"
+        "file:///home/estif/Documents/random-23/andres-extension/*"
       ]
     }
   ]
