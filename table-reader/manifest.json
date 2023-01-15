@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Table reader",
+  "version": "1.0",
+  "description": "Read table and add a border",
+  "icons": {
+    "16": "images/icon-16.png",
+    "32": "images/icon-32.png",
+    "48": "images/icon-48.png",
+    "128": "images/icon-128.png"
+  },
+  "content_scripts": [
+    {
+      "js": ["scripts/content.js"],
+      "matches": [
+        "file:///home/estif/Documents/random-23/html-table-json/Consumer_Service_History.html"
+      ]
+    }
+  ]
+}
