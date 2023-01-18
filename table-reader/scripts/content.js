@@ -28,21 +28,6 @@ function getBetterValue(initialHeader, initialValue) {
   }
 }
 
-function getFocusedObject(obj) {
-  obj.map((elements) => {
-    delete elements["Frequency"];
-    delete elements["Referral Status"];
-    delete elements["Service"];
-    delete elements["Setting Type"];
-    delete elements["End Reason"];
-    elements["Date"] = `${elements["Start Date"]} - ${elements["End Date"]}`;
-    delete elements["Start Date"];
-    delete elements["End Date"];
-    delete elements["Address"];
-  });
-  return obj;
-}
-
 function addToPage(obj) {
   obj.map((elements) => {
     let date = `${elements["Start Date"]} - ${elements["End Date"]}`;
