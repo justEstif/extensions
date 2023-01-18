@@ -28,19 +28,28 @@ function getBetterValue(initialHeader, initialValue) {
   }
 }
 
+function getFocusedObject(obj) {
+  obj.map((elements) => {
+    delete elements["Frequency"];
+    delete elements["Referral Status"];
+    delete elements["Service"];
+    delete elements["Setting Type"];
+    delete elements["End Reason"];
+    elements["Date"] = `${elements["Start Date"]} - ${elements["End Date"]}`;
+    delete elements["Start Date"];
+    delete elements["End Date"];
+    delete elements["Address"];
+  });
+  return obj;
+}
+
 function addToPage(obj) {
   obj.map((elements) => {
     let date = `${elements["Start Date"]} - ${elements["End Date"]}`;
     let name = `${elements["Resource Name"]}`;
-
-    let dateParagraph = document.createElement("p");
-    dateParagraph.innerText = date;
-
-    let nameParagraph = document.createElement("p");
-    nameParagraph.innerText = name;
-
-    document.body.appendChild(dateParagraph);
-    document.body.appendChild(nameParagraph);
+    let paragraph = document.createElement("p");
+    paragraph.innerHTML = `${date}<br/>${name}`;
+    document.body.appendChild(paragraph);
   });
 }
 
