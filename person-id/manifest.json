@@ -1,0 +1,13 @@
+{
+  "manifest_version": 2,
+  "name": "modify-page",
+  "version": "1.0",
+  "permissions": ["activeTab", "contextMenus"],
+  "browser_action": {
+    "default_title": "Person ID",
+    "default_popup": "popup/index.html"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
